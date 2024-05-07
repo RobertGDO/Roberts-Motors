@@ -1,5 +1,5 @@
 header {
-    background-color: #9E9E94;
+    background-color: #cccccc;
     color: #0A0A0B;
     grid-area: header;
     padding: 20px;
@@ -10,7 +10,7 @@ body {
   }
 
 nav {
-    background-color: #9E9E94;
+    background-color: #cccccc;
     grid-area: nav;
 }
 
@@ -22,7 +22,7 @@ nav a {
 
 /*main webpage name hover*/
 nav a:hover {
-    background-color: #9E9E94;
+    background-color: #cccccc;
     color: #fff;
     transition: 1s;
 }
@@ -46,7 +46,7 @@ main a {
 }
 
 main a:hover {
-    background-color: #9E9E94;
+    background-color: #cccccc;
     color: #fff;
     transition: 1s;
 }
@@ -59,7 +59,7 @@ main a:hover {
     "header nav"
     "main main"
     "footer footer";
-    background-color: #9E9E94;
+    background-color: #cccccc;
 }
 
 .sitereportMain img {
@@ -95,7 +95,7 @@ main a:hover {
 }
 
 aside {
-    background-color: #9E9E94;
+    background-color: #cccccc;
     grid-area: aside;
 }
 
@@ -110,7 +110,7 @@ aside img {
 }
 
 footer {
-    background-color: #9E9E94;
+    background-color: #a5a5a5;
     color: #0A0A0B;
     grid-area: footer;
     
@@ -125,7 +125,7 @@ footer {
 }
 
 footer a:hover {
-    background-color: #9E9E94;
+    background-color: #a5a5a5;
     color: #fff;
     transition: 1s;
 }

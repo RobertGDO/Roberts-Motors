@@ -1,5 +1,5 @@
 header {
-    background-color: #9E9E94;
+    background-color: #cccccc;
     color: #0A0A0B;
     grid-area: header
 }
@@ -15,7 +15,7 @@ body {
         "main"
         "aside"
         "footer";
-    background-color:#9E9E94;
+    background-color:#cccccc;
 }
 
 main {
@@ -57,7 +57,7 @@ main {
     "header"
     "main"
     "footer";
-    background-color: #9E9E94;
+    background-color: #cccccc;
 }
 
 .sitereportMain {
@@ -98,7 +98,7 @@ aside {
 
 /*sub-page name hover*/
 nav li:hover {
-    background-color: #9E9E94;
+    background-color: #cccccc;
     color: #fff;
 }
 
@@ -146,7 +146,7 @@ nav li, nav a {
 /*displays nav in hamburger nav*/
 nav {
     display: none;
-    background-color: #9E9E94;
+    background-color: #cccccc;
     position: fixed;
     top: 0;
     left: 50%;

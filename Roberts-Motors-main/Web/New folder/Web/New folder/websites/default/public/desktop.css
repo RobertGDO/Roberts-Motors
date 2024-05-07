@@ -1,5 +1,5 @@
 header {
-    background-color: #9E9E94;
+    background-color: #cccccc;
     color: #0A0A0B;
     grid-area: header
 }
@@ -11,13 +11,13 @@ body {
     grid-template-rows: auto;
     grid-template-areas: 
     "header nav"
-    "aside main"
+    "main main"
     "footer footer";
-    background-color: #9E9E94;
+    background-color: #cccccc;
 }
 
 main {
-    background-color: #9E9E94;
+    background-color: #cccccc;
     color: #0A0A0B;
     padding-left: 40%;
     grid-area: main;
@@ -67,7 +67,7 @@ nav ul {
 nav ul ul {
     position: absolute;
     display: block;
-    background-color: #9E9E94;
+    background-color: #cccccc;
     padding: 0;
     width: 100%;
     opacity: 0;
@@ -83,7 +83,7 @@ nav > ul > li:hover ul {
 
 /*highlights each sub name when hovered*/
 nav ul ul li:hover {
-    background-color: #9E9E94;
+    background-color: #cccccc;
     color: #fff;
     transition: 1s;
 }
@@ -96,7 +96,7 @@ nav ul ul li:hover {
     "header nav"
     "main main"
     "footer footer";
-    background-color: #9E9E94;
+    background-color: #cccccc;
 }
 
 .portfolioMain {
@@ -172,5 +172,5 @@ nav ul ul li:hover {
     grid-template-areas: 
     "header nav"
     "aside main";
-    background-color: #9E9E94;
+    background-color: #cccccc;
 }
