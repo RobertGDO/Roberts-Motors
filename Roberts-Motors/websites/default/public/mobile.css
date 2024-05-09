@@ -24,7 +24,7 @@ main {
     justify-content: center;
 }
 
-.portfolioMain {
+.buyCarsMain {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -37,19 +37,19 @@ main {
     align-items: center;
 }
 
-.workexperienceAside {
+.leaseCarsAside {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
     align-items: center;
 }
 
-.workexperienceAside div {
+.leaseCarsAside div {
     width: 17em;
     height: 30em;
 }
 
-.sitereportgrid {
+.shoppingCartgrid {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -60,14 +60,14 @@ main {
     background-color: #9E9E94;
 }
 
-.sitereportMain {
+.shoppingCartMain {
     display: grid;
     /*padding in between bottom and top*/
     row-gap: 2em;
     align-items: center;
 }
 
-.sitereportMain div {
+.shoppingCartMain div {
     width: 20em;
 }
 
@@ -77,7 +77,7 @@ aside {
     padding: 2em;
 }
 
-.contactAside {
+.loginAside {
     display:flex;
     padding: 2em;
 }
@@ -180,4 +180,3 @@ nav {
 #clicked:target .off {
     display: block;
 }
-
