@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" media="screen">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 800px)">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eczar">
+    <script src="https://kit.fontawesome.com/e5a0970892.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="clicked" class="loginGrid">
+
+    <header>
+        <a href="#clicked" class="on showNav"></a>
+        <a href="#" class="off showNav"></a>
+        <h1>Get in touch</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.php">Home</a>
+            </li>
+            <li>
+                <a href="buyCars.php">Portfolio</a>
+                <ul>
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                    <li>Project 3</li>
+                    <li>Project 4</li>
+                </ul>
+            </li>
+            <li>
+                <a href="leaseCars.php">Work Experience</a>
+                <ul>
+                    <li>Openreach</li>
+                    <li>BT</li>
+                    <li>H&S consultants</li>
+                    <li>Retail experience</li>
+                </ul>
+            </li>
+            <li>
+                <a href="shoppingCart.php">Site Report</a>
+                <ul>
+                    <li>Introduction</li>
+                    <li>Main</li>
+                    <li>Conclusion</li>
+                </ul>
+            </li>
+            <li>
+                <a href="login.php">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <p>Or find me on...</p>
+        <a href="https://www.facebook.com/Roxie008/" target=_blank><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://uk.linkedin.com/in/roxanne-bolton-9211681a3" target=_blank><i
+                class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/roxiemaico/?next=%2F" target=_blank><i
+                class="fa-brands fa-instagram"></i></a>
+    </main>
+    <aside class="loginAside">
+        <form action="mailto:roxie800@hotmail.com? subject=Contact" method="Get">
+            <div>
+                <label for="title">Mr:</label>
+                <input type="radio" name="Title" value="Mr" id="title">
+                <label for="title">Miss:</label>
+                <input type="radio" name="Title" value="Miss">
+                <label for="title">Mrs:</label>
+                <input type="radio" name="Title" value="Mrs">
+                <label for="title">Ms:</label>
+                <input type="radio" name="Title" value="Ms">
+            </div>
+            <label for="firstname">Firstname:</label>
+            <input type="text" name="firstname" id="firstname" required>
+            <label for="surname">Surname:</label>
+            <input type="text" name="surname" id="surname" required>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <label for="subject">Message subject:</label>
+            <select name="subject" id="subject">
+                <option value="1">Find out more</option>
+                <option value="2">Give feedback</option>
+                <option value="3">Ask questions</option>
+                <option value="5">Other</option>
+            </select>
+            <label for="moreinformation">Additional information:</label>
+            <textarea name="moreinformation" id="moreinformation"></textarea>
+            <label for="terms">Terms and conditions</label>
+            <input type="checkbox" name="terms" value="ticked" id="terms" required>
+            <input type="submit" value="submit">
+
+        </form>
+    </aside>
+    <footer>
+        <div>
+            <a href="https://www.facebook.com/Roxie008/" target=_blank><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://uk.linkedin.com/in/roxanne-bolton-9211681a3" target=_blank><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/roxiemaico/?next=%2F" target=_blank><i
+                    class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <div>
+            &copy; Roxanne Bolton 2023
+        </div>
+    </footer>
+</body>
+
+</html>
