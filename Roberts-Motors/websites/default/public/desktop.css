@@ -1,5 +1,5 @@
 header {
-    background-color: #9E9E94;
+    background-color: #fff;
     color: #0A0A0B;
     grid-area: header
 }
@@ -13,11 +13,11 @@ body {
     "header nav"
     "aside main"
     "footer footer";
-    background-color: #9E9E94;
+    background-color: #0A0A0B;
 }
 
 main {
-    background-color: #9E9E94;
+    background-color: #fff;
     color: #0A0A0B;
     padding-left: 40%;
     grid-area: main;
@@ -67,7 +67,7 @@ nav ul {
 nav ul ul {
     position: absolute;
     display: block;
-    background-color: #9E9E94;
+    background-color: #fff;
     padding: 0;
     width: 100%;
     opacity: 0;
@@ -83,12 +83,12 @@ nav > ul > li:hover ul {
 
 /*highlights each sub name when hovered*/
 nav ul ul li:hover {
-    background-color: #9E9E94;
-    color: #fff;
+    background-color: #fff;
+    color: #9E9E94;
     transition: 1s;
 }
 
-.portfoliogrid {
+.buyCarsGrid {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: auto;
@@ -99,7 +99,7 @@ nav ul ul li:hover {
     background-color: #9E9E94;
 }
 
-.portfolioMain {
+.buyCarsMain {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -112,7 +112,7 @@ nav ul ul li:hover {
     align-items: center;
 }
 
-.portfolioMain div {
+.buyCarsMain div {
     border: 2px solid #0A0A0B;
     background-color: #fff;
     border-radius: 40px;
@@ -126,15 +126,15 @@ nav ul ul li:hover {
     padding: 1em;
 }
 
-.portfolioMain div p {
+.buyCarsMain div p {
     color: #0A0A0B
 }
 
-.portfolioMain {
+.buyCarsMain {
     min-height: 85vh
 }
 
-.workexperienceAside {
+.leaseCarsAside {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
@@ -144,11 +144,11 @@ nav ul ul li:hover {
     align-items: center;
 }
 
-.workexperienceAside div {
+.leaseCarsAside div {
     height: 23em;
 }
 
-.sitereportMain {
+.shoppingCartMain {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
@@ -161,16 +161,16 @@ nav ul ul li:hover {
     align-items: center;
 }
 
-.sitereportMain div {
+.shoppingCartMain div {
     width: 65em;
 }
 
-.contactgrid {
+.loginGrid {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: auto;
     grid-template-areas: 
     "header nav"
     "aside main";
-    background-color: #9E9E94;
+    background-color: #0A0A0B;
 }
