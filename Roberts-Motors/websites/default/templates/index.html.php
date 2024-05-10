@@ -19,11 +19,33 @@ if (isset($_SESSION['loggedin'])) {
     else {}
 
 ?>
+        <h2>Latest 10 Cars Added!</h2>
+<?php
+
+$LatestCars = $pdo->prepare('SELECT * FROM cars ORDER BY car_id DESC LIMIT 10');
+$LatestCars->execute();
+
+
+echo '<ul class="CarProducts">';
+foreach($LatestCars as $cars){
+
+echo '<li>';
+?>
+    <img src=<?php echo $cars['images'];?> alt=<?php echo $cars['summary'];?>  width="200" 
+     height="200">
+
+<?php       
+        echo '<p>' . '£' . $cars['price'].'</div>';
+
+        echo '<p>'. 'Car Make:' . " " . $cars['car_name'].'</p>';
+
+        echo '<p>'. 'Engine:' . " " . $cars['engine'].'</p>';
         
-        
-        <h2>Top 10 best selling cars</h2>
-        <p>Polo</p>
-        <img src="images/Polo.png" alt=" The picture is of the best discounted car.">
-        <p>Polo</p>
-        <img src="images/Polo.png" alt=" The picture is of the best discounted car.">
-    </main>
+        echo '<p>'. 'Details:' . " " . $cars['details'].'</h3>';
+
+        echo '<p>'. 'Summary: ' . " " . $cars['summary'].'</h3>';
+
+echo '</li>';
+}
+echo '</ul>';
+?>
