@@ -39,7 +39,7 @@ CREATE TABLE `cars` (
   `summary` varchar(255) NOT NULL,
   `images` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`car_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,7 @@ CREATE TABLE `cars` (
 
 LOCK TABLES `cars` WRITE;
 /*!40000 ALTER TABLE `cars` DISABLE KEYS */;
-INSERT INTO `cars` VALUES (1,1000.00,'Vauxhall','1.0','eco-flex','Reliable car on the road, 2004 reg','https://cdn-images.fleetnews.co.uk/thumbs/856x856/web-clean/1/root/img-0613.jpg'),(2,3000.00,'BMW','2.0','TDI','Very fast','https://www.stratstone.com/-/media/stratstone/blog/2020/bmw-m-the-history-of-bmw-m-cars/bmw-e46-m3-1280x720px.ashx?mh=1440&la=en&h=720&w=1280&mw=2560&hash=916A0255BF8482B4954A222291F99AFD');
+INSERT INTO `cars` VALUES (1,1000.00,'Vauxhall','1.0','eco-flex','Reliable car on the road, 2004 reg','https://cdn-images.fleetnews.co.uk/thumbs/856x856/web-clean/1/root/img-0613.jpg'),(2,3000.00,'BMW','2.0','TDI','Very fast','https://www.stratstone.com/-/media/stratstone/blog/2020/bmw-m-the-history-of-bmw-m-cars/bmw-e46-m3-1280x720px.ashx?mh=1440&la=en&h=720&w=1280&mw=2560&hash=916A0255BF8482B4954A222291F99AFD'),(3,5000.00,'Range Rover','3.4','CDTI','Expensive','https://blackfoxmotors.de/wp-content/uploads/2023/01/Range_Rover_D350_Used-32-scaled.jpg'),(4,3000.00,'Bugatti','7.8','TDI','Cheap Bugatti','https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bugatti_Chiron_1.jpg/1200px-Bugatti_Chiron_1.jpg'),(5,900.00,'Fiat','1.0','TDI','Zoom','https://s1.cdn.autoevolution.com/images/news/gallery/the-fiat-500-offshore-car-is-an-adorable-limited-edition-car-boat-hybrid_6.jpg');
 /*!40000 ALTER TABLE `cars` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,4 +111,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-10 13:59:27
+-- Dump completed on 2024-05-10 16:21:08
