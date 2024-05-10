@@ -53,25 +53,27 @@ INSERT INTO `cars` VALUES (1,1000.00,'Vauxhall','1.0','eco-flex','Reliable car o
 UNLOCK TABLES;
 
 --
--- Table structure for table `test`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `test`;
+DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `test` (
-  `idtest` int(11) NOT NULL,
-  PRIMARY KEY (`idtest`)
+CREATE TABLE `users` (
+  `username` varchar(20) NOT NULL,
+  `password` varchar(75) NOT NULL,
+  PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `test`
+-- Dumping data for table `users`
 --
 
-LOCK TABLES `test` WRITE;
-/*!40000 ALTER TABLE `test` DISABLE KEYS */;
-/*!40000 ALTER TABLE `test` ENABLE KEYS */;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES ('Robert','Yesno'),('Test','Test'),('Yes','No'),('Zach','Yes');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -87,4 +89,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-10 12:50:29
+-- Dump completed on 2024-05-10 13:15:29
