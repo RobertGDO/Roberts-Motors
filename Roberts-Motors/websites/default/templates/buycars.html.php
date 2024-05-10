@@ -2,6 +2,8 @@
 
 <?php
 
+session_start();
+
 $pdo = new PDO('mysql:dbname=roberts_motors;host=mysql', 'student', 'student');
 
 $find = findAll($pdo, 'cars', 'car_id');

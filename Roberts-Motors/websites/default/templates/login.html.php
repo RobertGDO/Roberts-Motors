@@ -14,18 +14,22 @@ $schema = 'roberts_motors'; #The name of the sql schema
 
 $pdo = new PDO('mysql:dbname=' . $schema . ';host=' . $server, $username, $password); #The prepared statement to connect the database
 
-$stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username AND password = :password'); #The prepared statement that selects the email and password from the users table
-
 if (isset($_POST['login'])) { #If the login button is pressed
+    $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username AND password = :password'); #The prepared statement that selects the email and password from the users table
     $values = [
         'username' => $_POST['username'],
         'password' => $_POST['password'],
     ];
-
+    
     $stmt->execute($values); #Execute the prepared statement
 
-    $_SESSION['loggedin'] = true; #Set the session variable of 'loggedin' as true
-    $_SESSION['name'] = $_POST['username'];
+    if ($stmt->rowCount() > 0) {
+        echo 'Login successful';
+        $_SESSION['loggedin'] = true; #Set the session variable of 'loggedin' as true
+        $_SESSION['name'] = $_POST['username'];
+    } else {
+        echo 'Sorry your username and password could not be found';
+    }
 }
 
 ?>
@@ -43,12 +47,7 @@ if (isset($_POST['login'])) { #If the login button is pressed
 
             <input type="submit" name="login" value="Login" />
 
-            <?php if ($stmt->rowCount() > 0) {
-                echo 'Login successful';
-            } else {
-                echo 'Sorry your username and password could not be found';
-            }
-
+            <?php
             echo '<p id="END">Not a user? <a href="https://v.je/register.php">Register</a></p> '; #If you are not a user click here and you will be taken to the register page
             ?>
 

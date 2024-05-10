@@ -53,11 +53,16 @@
                 </ul>
             </li>
             <li>
-                <a href="login.php">Login</a>
-                <ul>
-                    <li>Sign in</li>
-                    <li>Register</li>
-                    <li>Admin Login</li>
+            <?php if (isset($_SESSION['loggedin'])) {
+                    echo '<a href="logout.php">Logout</a>' ;}
+                 else {
+                    echo '<a href="login.php">Login</a>
+        <ul>
+            <li>Sign in</li>
+            <li>Register</li>
+            <li>Admin Login</li>}'
+                    ;
+                } ?>
                 </ul>
             </li>
         </ul>

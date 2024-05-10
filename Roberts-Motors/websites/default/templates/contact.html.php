@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+   
    </main>
     <aside class="contactAside">
         <form action="mailto:roxie800@hotmail.com? subject=Contact" method="Get">

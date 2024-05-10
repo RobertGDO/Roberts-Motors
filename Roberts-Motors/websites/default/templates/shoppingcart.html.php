@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
         <div id="Introduction">
             <p>At the beginning of this project, I was so worried to change something as I thought if I did it might
                 ruin the whole website and so I never used to delete anything only commented things out. Finally towards
