@@ -27,7 +27,7 @@ aside {
     /*places content in aside in the center*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     padding-left: 20px;
     grid-area: aside;
 }
