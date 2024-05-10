@@ -19,7 +19,7 @@ body {
 main {
     background-color: #fff;
     color: #0A0A0B;
-    padding-left: 40%;
+    padding-left: 5%;
     grid-area: main;
 }
 
@@ -174,3 +174,8 @@ nav ul ul li:hover {
     "aside main";
     background-color: #0A0A0B;
 }
+
+.CarProducts, .reviews {list-style-type: none;}
+.CarProducts li, .reviews li {padding: 2em;}
+.CarProducts li:nth-child(odd), .reviews li:nth-child(odd) {background-color: #ffffff;}
+.CarProducts li:nth-child(even), .products li:nth-child(even) {background-color: #ddd;}
