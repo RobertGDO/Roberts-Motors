@@ -1,6 +1,7 @@
 
 
 <?php
+session_start();
 
 $pdo = new PDO('mysql:dbname=roberts_motors;host=mysql', 'student', 'student');
 

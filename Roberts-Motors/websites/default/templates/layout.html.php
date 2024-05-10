@@ -38,7 +38,7 @@
                     <li>Saved searches</li>
                 </ul>
             </li>
-            
+
             <li>
                 <a href="leasecars.php">Lease Cars</a>
                 <ul>
@@ -53,20 +53,30 @@
                 </ul>
             </li>
             <li>
-                <a href="login.php">Login</a>
-                <ul>
-                    <li>Sign in</li>
-                    <li>Register</li>
-                    <li>Admin Login</li>
-                </ul>
-            </li>
+                <?php if (isset($_SESSION['loggedin'])) {
+                    echo '<a href="logout.php">Logout</a>' ;}
+                 else {
+                    echo '<a href="login.php">Login</a>
+        <ul>
+            <li>Sign in</li>
+            <li>Register</li>
+            <li>Admin Login</li>}'
+                    ;
+                } ?>
+
+
+
+
+
+        </ul>
+        </li>
         </ul>
     </nav>
     <main>
-    <?=$templateVars['output']?>
+        <?= $templateVars['output'] ?>
     </main>
     <aside>
-    <p>Filter search</p>
+        <p>Filter search</p>
         <ul>
             <li>Make
                 <ul>
@@ -151,10 +161,11 @@
             <a href="https://www.facebook.com/Roxie008/" target=_blank><i class="fa-brands fa-square-facebook"></i></a>
             <a href="https://uk.linkedin.com/in/roxanne-bolton-9211681a3" target=_blank><i
                     class="fa-brands fa-linkedin"></i></a>
-            <a href="<a href="https://www.instagram.com/robertmotorsgp/" target=_blank><i" target=_blank><i
-                    class="fa-brands fa-instagram"></i></a>
+            <a href="<a href=" https://www.instagram.com/robertmotorsgp/" target=_blank>
+                <i" target=_blank><i class="fa-brands fa-instagram"></i>
+            </a>
         </div>
-    
+
         <div>&copy; Roberts Motors 2024</div>
     </footer>
 </body>

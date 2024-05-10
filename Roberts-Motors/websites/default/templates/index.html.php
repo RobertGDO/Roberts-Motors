@@ -15,7 +15,7 @@ $pdo = new PDO('mysql:dbname=' . $schema . ';host=' . $server, $username, $passw
 $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username AND password = :password');
 
 if (isset($_SESSION['loggedin'])) {
-    echo "Welcome back " . $_SESSION['name'];}
+    echo  "Welcome " . $_SESSION['name'];}
     else {}
 
 ?>

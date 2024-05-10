@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
     <main class="portfolioMain">
         <img src="images/placeholder.png" alt="Image of project I have completed">
         <div id="project1">

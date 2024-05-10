@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
     <aside class ="workexperienceAside">
         <div id="retailexperience">
