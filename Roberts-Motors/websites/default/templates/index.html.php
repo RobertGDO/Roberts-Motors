@@ -41,9 +41,9 @@ echo '<li>';
 
         echo '<p>'. 'Engine:' . " " . $cars['engine'].'</p>';
         
-        echo '<p>'. 'Details:' . " " . $cars['details'].'</h3>';
+        echo '<p>'. 'Details:' . " " . $cars['details'].'</p>';
 
-        echo '<p>'. 'Summary: ' . " " . $cars['summary'].'</h3>';
+        echo '<p>'. 'Summary: ' . " " . $cars['summary'].'</p>';
 
 echo '</li>';
 }

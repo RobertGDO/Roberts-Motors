@@ -236,9 +236,11 @@ nav ul ul li:hover {
 .CarProducts li:nth-child(odd),
 .reviews li:nth-child(odd) {
     background-color: #ffffff;
+    width: 900px;
 }
 
 .CarProducts li:nth-child(even),
 .products li:nth-child(even) {
     background-color: #ddd;
+    width: 900px;
 }
