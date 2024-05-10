@@ -17,14 +17,15 @@ $pdo = new PDO('mysql:dbname=' . $schema . ';host=' . $server, $username, $passw
 $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username AND password = :password'); #The prepared statement that selects the email and password from the users table
 
 if (isset($_POST['login'])) { #If the login button is pressed
-
     $values = [
         'username' => $_POST['username'],
-        'password' => $_POST['password']
-
+        'password' => $_POST['password'],
     ];
+
     $stmt->execute($values); #Execute the prepared statement
+
     $_SESSION['loggedin'] = true; #Set the session variable of 'loggedin' as true
+    $_SESSION['name'] = $_POST['username'];
 }
 
 ?>
