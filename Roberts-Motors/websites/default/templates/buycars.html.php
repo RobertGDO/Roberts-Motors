@@ -24,13 +24,13 @@ echo '<li>';
      height="200">
 
 <?php       
-        echo '<h3>' . $cars['price'].'</div>';
+        echo '<h3>' . '£' . $cars['price'].'</div>';
 
-        echo '<p>'. 'car_name:' . " " . $cars['car_name'].'</p>';
+        echo '<p>'. 'Car Make:' . " " . $cars['car_name'].'</p>';
 
         echo '<p>'. 'Engine:' . " " . $cars['engine'].'</p>';
         
-        echo '<p>'. 'details' . " " . $cars['details'].'</h3>';
+        echo '<p>'. 'Details:' . " " . $cars['details'].'</h3>';
 
         echo '<p>'. 'Summary: ' . " " . $cars['summary'].'</h3>';
 
