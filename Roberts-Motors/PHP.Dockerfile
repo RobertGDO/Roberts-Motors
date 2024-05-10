@@ -4,8 +4,8 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 RUN apk add --no-cache $PHPIZE_DEPS
 RUN apk add --no-cache linux-headers
-RUN pecl install xdebug 
-
+RUN pecl install xdebug
+ 
 RUN docker-php-ext-enable xdebug 
 RUN docker-php-ext-install pdo pdo_mysql
 

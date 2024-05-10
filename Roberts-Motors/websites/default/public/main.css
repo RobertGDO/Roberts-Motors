@@ -96,7 +96,23 @@ main a:hover {
 
 aside {
     background-color: #fff;
+    min-height: 20px;
+    padding: 1vw;
+    color: #0A0A0B;
     grid-area: aside;
+}
+
+/*takes away hyperlink look*/
+aside a {
+    text-decoration: none;
+    color: #0A0A0B;
+}
+
+/*main webpage name hover*/
+aside a:hover {
+    background-color: #fff;
+    color: #9E9E94;
+    transition: 1s;
 }
 
 aside img {
@@ -275,9 +291,3 @@ form div {
     grid-column-start: 1;
     grid-column-end: 3;
 }
-
-
-.CarProducts, .reviews {list-style-type: none;}
-.CarProducts li, .reviews li {padding: 2em;}
-.CarProducts li:nth-child(odd), .reviews li:nth-child(odd) {background-color: #ffffff;}
-.CarProducts li:nth-child(even), .products li:nth-child(even) {background-color: #ddd;}
