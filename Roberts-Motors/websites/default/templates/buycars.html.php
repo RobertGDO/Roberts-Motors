@@ -1,45 +1,16 @@
 
+        <div id="work1">
+            <p>Oct 2021</p>
+            <p>Trainee Network Engineer Openreach, (based nationwide)</p>
+        </div>
+    
+        <div id="work2">
+            <p>Feb 2018</p>
+            <p>Take your Daughter to Work BT Group PLC (Security Hatfield)</p>
+        </div>
+    
+        <div id="work3">
+            <p>Jan 2016</p>
+            <p>Administration Assistant European H&S Consultants, CMK</p>
+        </div>
 
-<?php
-
-$pdo = new PDO('mysql:dbname=roberts_motors;host=mysql', 'student', 'student');
-
-$find = findAll($pdo, 'cars', 'car_id');
-
-
-?>
-
-<hr />
-
-<h2>Cars For Sale</h2>
-
-
-<?php
-echo '<ul class="CarProducts">';
-foreach($find as $cars){
-
-echo '<li>';
-?>
-    <img src=<?php echo $cars['images'];?> alt=<?php echo $cars['summary'];?>  width="200" 
-     height="200">
-
-<?php       
-        echo '<h3>' . $cars['price'].'</div>';
-
-        echo '<p>'. 'car_name:' . " " . $cars['car_name'].'</p>';
-
-        echo '<p>'. 'Engine:' . " " . $cars['engine'].'</p>';
-        
-        echo '<p>'. 'details' . " " . $cars['details'].'</h3>';
-
-        echo '<p>'. 'Summary: ' . " " . $cars['summary'].'</h3>';
-
-        if (isset($_SESSION['loggedin'])) {
-        ?>
-        <a href="Reviews.php?id=<?=$product['productid']?>"> Ask a question</a>
-        <?php
-        }
-echo '</li>';
-}
-echo '</ul>';
-?>
