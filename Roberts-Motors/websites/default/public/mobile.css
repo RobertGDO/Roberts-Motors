@@ -180,3 +180,8 @@ nav {
 #clicked:target .off {
     display: block;
 }
+
+.CarProducts, .reviews {list-style-type: none;}
+.CarProducts li, .reviews li {padding: 2em;}
+.CarProducts li:nth-child(odd), .reviews li:nth-child(odd) {background-color: #fff;}
+.CarProducts li:nth-child(even), .products li:nth-child(even) {background-color: #ddd;}
