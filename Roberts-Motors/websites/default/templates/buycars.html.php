@@ -26,7 +26,7 @@ echo '<li>';
      height="200">
 
 <?php       
-        echo '<h3>' . '£' . $cars['price'].'</div>';
+        echo '<p>' . '£' . $cars['price'].'</div>';
 
         echo '<p>'. 'Car Make:' . " " . $cars['car_name'].'</p>';
 

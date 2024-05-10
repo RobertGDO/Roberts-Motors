@@ -49,6 +49,7 @@ if (isset($_POST['login'])) { #If the login button is pressed
 
             <?php
             echo '<p id="END">Not a user? <a href="https://v.je/register.php">Register</a></p> '; #If you are not a user click here and you will be taken to the register page
+            echo '<p> Employee Login Click <a href="AdminLogin.php">Here</a></p>'
             ?>
 
         </form>
