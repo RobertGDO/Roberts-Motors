@@ -56,13 +56,14 @@
             </li>
             <li>
             <?php if (isset($_SESSION['loggedin'])) {
-                    echo '<a href="logout.php">Logout</a>' ;}
-                 else {
-                    echo '<a href="login.php">Login</a>
-        <ul>
-            <li>Sign in</li>
-            <li>Register</li>
-            <li>Admin Login</li>}'
+                    echo '<a href="logout.php">Logout</a>' ;
+                }elseif (isset($_SESSION['adminloggedin'])) {
+                    ?>
+                    <li><a href="Admindash.php">Admin</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                <?php
+                } else {
+                    echo '<a href="login.php">Login</a>'
                     ;
                 } ?>
                 </ul>
