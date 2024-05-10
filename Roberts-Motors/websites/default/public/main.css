@@ -125,8 +125,8 @@ footer {
 }
 
 footer a:hover {
-    background-color: #9E9E94;
-    color: #fff;
+    background-color: #fff;
+    color: #9E9E94;
     transition: 1s;
 }
 
