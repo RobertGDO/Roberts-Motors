@@ -29,8 +29,10 @@ if (isset($_POST['register'])) {
     $stmt->execute($values);
 
     if ($stmt->rowCount() > 0) {
-        echo '<p>Account registered, please return to login</p>';
-    } else {
+        echo '<p> Account registered, please return to 
+            <a href="login.php">login</a>
+            </p>'
+    ;} else {
         echo 'Email is already in use, please try another username';
     }
 }
@@ -41,7 +43,7 @@ if (isset($_POST['register'])) {
         <hr />
 
         <form action="" method="POST">
-            <label>Email</label>
+            <label>Username</label>
             <label>Password</label>
             <input type="username" name="username" />
             <input type="password" name="password" />
