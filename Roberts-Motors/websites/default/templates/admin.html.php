@@ -8,7 +8,7 @@ if(isset($_POST['login'])) {
     $stmt = $pdo->prepare('SELECT * FROM admin_login WHERE username = :username AND password = :password');
     $values = [
             'username' => $_POST['username'],
-            'password' => $_POST['password']
+            'password' => sha1($_POST['username'] . $_POST['password'])
     ];
 
     $stmt->execute($values);
