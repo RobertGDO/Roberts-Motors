@@ -3,32 +3,30 @@ session_start();
 //connection to database
 $pdo = new PDO('mysql:dbname=roberts_motors;host=mysql', 'student', 'student');
 
-if(isset($_POST['addaccesories'])) {
+if(isset($_POST['addaccessory'])) {
     //check username and password
-    $addcar = [
+    $addaccessory = [
         'price' => $_POST['price'],
         'accessory_name' => $_POST['accessory_name'],
-        'engine' => $_POST['engine'],
-        'details' => $_POST['details'],
-        'summary' => $_POST['summary'],
-        'images' => $_POST['images']
+        'description' => $_POST['description'],
+        'image' => $_POST['image']
     ];
 
-    insert($pdo, 'cars', $addcar);
-    echo "Car added";
+    insert($pdo, 'accessories', $addaccessory);
+    echo "Accessory added";
 }
 else{
 ?>
 <form action="AddAccessory.php" method="POST">
-    <label>price:</label>
-    <label>accessory_name</label>
+    <label>Price:</label>
+    <label>Accessory name</label>
     <input type="text" name = "price" />
     <input type="text" name="accessory_name"/>
     <label>Description:</label>
     <label>Image URL of Accessory:</label>
     <input type="text" name="description"/>
-    <input type="text" name="images"/>
-    <input type="submit" name="addcar" value="Add Car"/>
+    <input type="text" name="image"/>
+    <input type="submit" name="addaccessory" value="Add a accessory"/>
 
 </form>
 <?php
