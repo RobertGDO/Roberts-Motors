@@ -112,14 +112,13 @@ DROP TABLE IF EXISTS `cart`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cart` (
-  `car_id` int(11) DEFAULT NULL,
-  `price` int(100) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `price` decimal(8,2) DEFAULT NULL,
   `number` int(100) NOT NULL AUTO_INCREMENT,
-  `car_name` varchar(45) DEFAULT NULL,
-  `product_id` int(100) DEFAULT NULL,
+  `product_name` varchar(255) DEFAULT NULL,
   `quantity` int(20) DEFAULT NULL,
   PRIMARY KEY (`number`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,7 +127,7 @@ CREATE TABLE `cart` (
 
 LOCK TABLES `cart` WRITE;
 /*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-INSERT INTO `cart` VALUES (1,1000,3,'Vauxhall',NULL,NULL);
+INSERT INTO `cart` VALUES (1,1000.00,3,'Vauxhall',NULL),(4,3000.00,4,'Bugatti',NULL),(1,5.00,5,'Air Freshener',NULL),(1,4.99,6,'Air Freshener',NULL),(2,2000.00,7,'Screen Cleaner',NULL),(1,1000.00,10,'Vauxhall',NULL);
 /*!40000 ALTER TABLE `cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -191,4 +190,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-11 12:40:27
+-- Dump completed on 2024-05-11 14:49:26
