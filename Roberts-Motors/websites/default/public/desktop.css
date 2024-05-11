@@ -79,22 +79,21 @@ aside ul ul li:hover {
     transition: 1s;
 }
 
-/*brings nav bar down*/
-/*nav ul {
+/*brings nav bar down*/*nav ul {
     display:flex;
     justify-content: space-evenly;
     padding: 0;
     margin: 0;
     height: 100%;
     align-items: center;
-}*/
+}
 
 nav ul li {
     position: relative;
     list-style: none;
 }
 
-/*nav li, nav a {
+nav li, nav a {
     height: 100%;
     width: 100%;
     display: block;
@@ -102,7 +101,7 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-}*/
+}
 
 /*styles main webpage names list into nav bar*/
 nav ul {
