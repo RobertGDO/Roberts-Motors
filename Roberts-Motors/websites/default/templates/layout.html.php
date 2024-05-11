@@ -33,12 +33,6 @@
             </li>
             <li>
                 <a href="buycars.php">Buy Cars</a>
-                <ul>
-                    <li>Search</li>
-                    <li>Filter</li>
-                    <!-- once logined in to customer portal make this seen: -->
-                    <li>Saved searches</li>
-                </ul>
             </li>
             
             <li>
@@ -46,9 +40,6 @@
             </li>
             <li>
                 <a href="shoppingcart.php">Shopping cart</a>
-                <ul>
-                    <li>Saved cars</li>
-                </ul>
             </li>
             <li>
             <?php if (isset($_SESSION['loggedin'])) {
