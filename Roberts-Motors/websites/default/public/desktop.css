@@ -227,6 +227,18 @@ nav ul ul li:hover {
     list-style-type: none;
 }
 
+
+.car-image {
+    margin-right: 20px; /* Space between image and info */
+}
+
+.car-info {
+    flex: 1; /* Takes the remaining space */
+}
+.car-button {
+    margin-top: 10px; /* Space above the button */
+}
+
 .CarProducts li,
 .reviews li {
     padding: 2em;
@@ -236,10 +248,12 @@ nav ul ul li:hover {
 .reviews li:nth-child(odd) {
     background-color: #ffffff;
     width: 900px;
+   object-fit: cover;
 }
 
 .CarProducts li:nth-child(even),
 .products li:nth-child(even) {
     background-color: #ddd;
     width: 900px;
+    object-fit: cover;
 }

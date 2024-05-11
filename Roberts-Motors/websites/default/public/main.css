@@ -30,12 +30,12 @@ nav a:hover {
 main img {
     background-color: #fff;
     width: 20vw;
+    object-fit: cover;
     /*shadow colour of image*/
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     /*frame thinkness and colour*/
     border: 1px solid #0A0A0B;
     /*roundness of image*/
-    border-radius: 30%;
 }
 
 main a {

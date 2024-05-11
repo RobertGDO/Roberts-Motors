@@ -37,7 +37,7 @@ CREATE TABLE `accessories` (
   `image` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`accessories_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `accessories` (
 
 LOCK TABLES `accessories` WRITE;
 /*!40000 ALTER TABLE `accessories` DISABLE KEYS */;
-INSERT INTO `accessories` VALUES (1,4.99,'Air Freshener','https://www.costco.co.uk/medias/sys_master/images/h05/h77/10611315834910.jpg','Make your car smell great with this little tree\'s air freshener!');
+INSERT INTO `accessories` VALUES (1,4.99,'Air Freshener','https://www.costco.co.uk/medias/sys_master/images/h05/h77/10611315834910.jpg','Make your car smell great with this little tree\'s air freshener!'),(2,2000.00,'Screen Cleaner','https://m.media-amazon.com/images/I/71NVU5tPX0L._AC_UF894,1000_QL80_.jpg','Wash your car with this screen cleaner!');
 /*!40000 ALTER TABLE `accessories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -191,4 +191,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-11 11:35:52
+-- Dump completed on 2024-05-11 12:40:27
