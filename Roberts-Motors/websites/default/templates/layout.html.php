@@ -42,11 +42,7 @@
             </li>
             
             <li>
-                <a href="leasecars.php">Lease Cars</a>
-                <ul>
-                    <li>Cars available</li>
-                    <li>Credit check</li>
-                </ul>
+                <a href="buyaccessories.php">Buy Accessories</a>
             </li>
             <li>
                 <a href="shoppingcart.php">Shopping cart</a>
