@@ -38,7 +38,7 @@ echo '<li>';
 
         if (isset($_SESSION['loggedin'])) {
         ?>
-        <a href="Reviews.php?id=<?=$product['productid']?>"> Ask a question</a>
+        <a href="Reviews.php?id=<?=$product['productid']?>"> View the Product</a>
         <?php
         }
 echo '</li>';
