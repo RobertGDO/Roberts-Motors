@@ -8,7 +8,9 @@ header {
 body {
     display: grid;
     background-color: #0A0A0B;
+    line-height: 250%;
     grid-template-columns: 50% 50%;
+    font-size: larger;
     grid-template-rows: auto;
     grid-template-areas:
         "header nav"
@@ -19,7 +21,7 @@ body {
 main {
     background-color: #fff;
     color: #0A0A0B;
-    padding-left: 5%;
+    text-align: center;
     grid-area: main;
 }
 
