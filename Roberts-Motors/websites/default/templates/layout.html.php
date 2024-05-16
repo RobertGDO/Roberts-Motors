@@ -30,21 +30,20 @@
                 <a href="index.php">Home</a>
             </li>
             <li>
+                <a href="about.php">About Us</a>
+            </li>
+            <li>
                 <a href="buycars.php">Buy Cars</a>
                 <ul>
-                    <li>Search</li>
-                    <li>Filter</li>
-                    <!-- once logined in to customer portal make this seen: -->
-                    <li>Saved searches</li>
-                </ul>
+                        <li>New Cars</li>
+                        <li>Used Cars </li>
+
+                    </ul>
             </li>
             
             <li>
                 <a href="leasecars.php">Lease Cars</a>
-                <ul>
-                    <li>Cars available</li>
-                    <li>Credit check</li>
-                </ul>
+
             </li>
             <li>
                 <a href="shoppingcart.php">Shopping cart</a>
@@ -117,7 +116,7 @@
             <a href="https://www.facebook.com/Roxie008/" target=_blank><i class="fa-brands fa-square-facebook"></i></a>
             <a href="https://uk.linkedin.com/in/roxanne-bolton-9211681a3" target=_blank><i
                     class="fa-brands fa-linkedin"></i></a>
-            <a href="<a href="https://www.instagram.com/robertmotorsgp/" target=_blank><i" target=_blank><i
+            <a href="https://www.instagram.com/robertmotorsgp/" target=_blank><i" target=_blank><i
                     class="fa-brands fa-instagram"></i></a>
         </div>
     

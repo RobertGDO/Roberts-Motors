@@ -30,21 +30,20 @@
                 <a href="index.php">Home</a>
             </li>
             <li>
+                <a href="about.php">About Us</a>
+            </li>
+            <li>
                 <a href="buycars.php">Buy Cars</a>
                 <ul>
-                    <li>Search</li>
-                    <li>Filter</li>
-                    <!-- once logined in to customer portal make this seen: -->
-                    <li>Saved searches</li>
-                </ul>
+                        <li>New Cars</li>
+                        <li>Used Cars </li>
+
+                    </ul>
             </li>
             
             <li>
                 <a href="leasecars.php">Lease Cars</a>
-                <ul>
-                    <li>Cars available</li>
-                    <li>Credit check</li>
-                </ul>
+
             </li>
             <li>
                 <a href="shoppingcart.php">Shopping cart</a>
