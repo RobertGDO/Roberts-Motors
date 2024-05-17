@@ -64,6 +64,11 @@ function save($pdo, $table, $record, $primaryKey) {
     }
 }
 
+function DeleteALL($pdo, $table) {
+    $stmt = $pdo->prepare('DELETE FROM ' . $table);
+    $stmt->execute();
+    }
+
 
 class DatabaseTable {
     public function find($pdo, $table, $field, $value) {

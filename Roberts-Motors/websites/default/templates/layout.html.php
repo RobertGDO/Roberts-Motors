@@ -38,6 +38,9 @@
             <li>
                 <a href="buyaccessories.php">Buy Accessories</a>
             </li>
+            <li>
+                <a href="about.php">About Us</a>
+            </li>
             <?php if (isset($_SESSION['loggedin'])) {
                ?> 
                 <li><a href="shoppingcart.php">Shopping cart</a></li>

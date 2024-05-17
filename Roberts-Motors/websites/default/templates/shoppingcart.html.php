@@ -20,10 +20,5 @@ foreach($find as $cart){
 
 echo '<p>'. 'Total Amount:' . " " . $row['total'];
 ?>
-    <input type="submit" value="Clear Basket" name="clear_basket">
+    <a href="clear.php">Clear Basket</a>
     <input type="submit" value="Checkout" name="checkout">
-<?php
-    if (isset($_POST['remove_item'])) {
-        header('Location: delete.php');
-    }
-?>
