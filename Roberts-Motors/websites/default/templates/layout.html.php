@@ -61,92 +61,53 @@
     <?=$templateVars['output']?>
     </main>
     <aside>
-    <p>Filter search</p>
-        <ul>
-            <li>Make
-                <ul>
-                    <li>Fiat</li>
-                    <li>Volkswagen</li>
-                    <li>Ford</li>
-                    <li>Vauxhall</li>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li>Model
-                <ul>
-                    <li>500</li>
-                    <li>Polo</li>
-                    <li>Golf</li>
-                    <li>Corsa</li>
-                    <li>Fiesta</li>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li>Mileage
-                <ul>
-                    <li>From</li>
-                    <li>To</li>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li>Gearbox
-                <ul>
-                    <li>Automatic</li>
-                    <li>Maunal</li>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li>Fuel type
-                <ul>
-                    <li>Petrol</li>
-                    <li>Diesel</li>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li>Engine size
-                <ul>
-                    <li>1.0</li>
-                    <li>1.2</li>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li>Doors
-                <ul>
-                    <li>5</li>
-                    <li>3</li>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li>Colour
-                <ul>
-                    <li>Blue</li>
-                    <li>White</li>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li>Seats
-                <ul>
-                    <li>2</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
-            </li>
-        </ul>
+    <h2>Filter search</h2>
+    <form action="/search-cars" method="GET">
+            <label for="make">Make</label>
+            <select id="make" name="make">
+                <option value="">Any</option>
+                <option value="fiat">Fiat</option>
+                <option value="volkswagon">Volkswagon</option>
+                <option value="ford">Ford</option>
+                <option value="vauxhall">Vauxhall</option>
+            </select>
+            <label for="model">Model</label>
+            <select id="model" name="model">
+                <option value="">Any</option>
+                <option value="500">500</option>
+                <option value="polo">Polo</option>
+                <option value="golf">Golf</option>
+                <option value="corsa">Corsa</option>
+                <option value="fiesta">Fiesta</option>
+               
+            </select>
+            <label for="mileage-max">Mileage (Max)</label>
+            <input type="number" id="mileage-max" name="mileage_max" placeholder="Max Mileage">
+            <label for="fuel-type">Fuel Type</label>
+            <select id="fuel-type" name="fuel_type">
+                <option value="">Any</option>
+                <option value="petrol">Petrol</option>
+                <option value="diesel">Diesel</option>
+                <option value="electric">Electric</option>
+                <option value="hybrid">Hybrid</option>
+            </select>
+         
+            <label for="transmission">Transmission</label>
+            <select id="transmission" name="transmission">
+                <option value="">Any</option>
+                <option value="manual">Manual</option>
+                <option value="automatic">Automatic</option>
+            </select>
+            
+            <button type="submit">Search</button>
+        </form>
     </aside>
     <footer>
         <div>
             <a href="https://www.facebook.com/Roxie008/" target=_blank><i class="fa-brands fa-square-facebook"></i></a>
             <a href="https://uk.linkedin.com/in/roxanne-bolton-9211681a3" target=_blank><i
                     class="fa-brands fa-linkedin"></i></a>
-            <a href="<a href="https://www.instagram.com/robertmotorsgp/" target=_blank><i" target=_blank><i
+            <a href="https://www.instagram.com/robertmotorsgp/" target=_blank><i" target=_blank><i
                     class="fa-brands fa-instagram"></i></a>
         </div>
     
