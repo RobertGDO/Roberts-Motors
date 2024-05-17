@@ -26,6 +26,7 @@ if (isset($_POST['login'])) { #If the login button is pressed
     if ($stmt->rowCount() > 0) {
         $_SESSION['loggedin'] = true; #Set the session variable of 'loggedin' as true
         header('Location: index.php');
+        $clear = DeleteALL($pdo, 'cart');
         $_SESSION['name'] = $_POST['username'];
     } else {
         echo 'Sorry your username and password could not be found';

@@ -16,6 +16,7 @@ if(isset($_POST['login'])) {
     if($stmt->rowCount() > 0){
         $_SESSION['adminloggedin'] = true;
         echo '<p> Successful Admin Sign in </p>';
+        $clear = DeleteALL($pdo, 'cart');
         $_SESSION['username'] = $_POST['username'];
     }
     else{
