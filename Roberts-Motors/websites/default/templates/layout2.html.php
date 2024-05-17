@@ -34,19 +34,19 @@
             <li>
                 <a href="buycars.php">Buy Cars</a>
             </li>
-            
+
             <li>
                 <a href="buyaccessories.php">Buy Accessories</a>
             </li>
-            <li>
-                <a href="shoppingcart.php">Shopping cart</a>
-            </li>
-            <li>
             <?php if (isset($_SESSION['loggedin'])) {
-                    echo '<a href="logout.php">Logout</a>' ;
+               ?> 
+                <li><a href="shoppingcart.php">Shopping cart</a></li>
+                <li><a href="logout.php">Logout</a></li> 
+                <?php
                 }elseif (isset($_SESSION['adminloggedin'])) {
                     ?>
                     <li><a href="Admindash.php">Admin</a></li>
+                    <li><a href="shoppingcart.php">Shopping cart</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 <?php
                 } else {
