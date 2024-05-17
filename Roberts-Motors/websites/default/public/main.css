@@ -7,7 +7,7 @@ header {
 
 body {
     font-family: 'Eczar', serif;
-  }
+}
 
 nav {
     background-color: #fff;
@@ -29,13 +29,29 @@ nav a:hover {
 
 main img {
     background-color: #fff;
-    width: 20vw;
+    width: 35vw;
     object-fit: cover;
     /*shadow colour of image*/
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     /*frame thinkness and colour*/
     border: 1px solid #0A0A0B;
     /*roundness of image*/
+}
+
+.banner-img {
+    /*width: 800px;
+    object-fit: cover;*/
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://wallpapers.com/images/high/ultra-wide-4k-car-xkxr4j3eotg26a22.webp");
+
+    /* Set a specific height */
+    height: 15%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 main a {
@@ -51,15 +67,26 @@ main a:hover {
     transition: 1s;
 }
 
+.indexGrid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header nav"
+        "main main"
+        "footer footer";
+    background-color: #fff;
+}
+
 .shoppingCartGrid {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "header nav"
-    "main main"
-    "footer footer";
-    background-color: #9E9E94;
+    grid-template-areas:
+        "header nav"
+        "main main"
+        "footer footer";
+    background-color: #fff;
 }
 
 .shoppingCartMain img {
@@ -113,7 +140,7 @@ footer {
     background-color: #fff;
     color: #0A0A0B;
     grid-area: footer;
-    
+
     /*puts content in footer in the center*/
     display: flex;
     justify-content: center;
@@ -277,7 +304,22 @@ form div {
 }
 
 
-.CarProducts, .reviews {list-style-type: none;}
-.CarProducts li, .reviews li {padding: 2em;}
-.CarProducts li:nth-child(odd), .reviews li:nth-child(odd) {background-color: #ffffff;}
-.CarProducts li:nth-child(even), .products li:nth-child(even) {background-color: #ddd;}
+.CarProducts,
+.reviews {
+    list-style-type: none;
+}
+
+.CarProducts li,
+.reviews li {
+    padding: 2em;
+}
+
+.CarProducts li:nth-child(odd),
+.reviews li:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.CarProducts li:nth-child(even),
+.products li:nth-child(even) {
+    background-color: #ddd;
+}
