@@ -22,4 +22,4 @@ foreach ($find as $cart) {
 echo '<p>' . 'Total Amount:' . " " . $row['total'];
 ?>
 <a href="clear.php">Clear Basket</a>
-<input type="submit" value="Checkout" name="checkout">
+<a href="checkout.php">Checkout</a>
