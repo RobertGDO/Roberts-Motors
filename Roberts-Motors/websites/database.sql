@@ -62,7 +62,7 @@ CREATE TABLE `admin_login` (
   `username` varchar(225) DEFAULT NULL,
   `password` varchar(225) DEFAULT NULL,
   PRIMARY KEY (`idadmin_login`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +71,7 @@ CREATE TABLE `admin_login` (
 
 LOCK TABLES `admin_login` WRITE;
 /*!40000 ALTER TABLE `admin_login` DISABLE KEYS */;
-INSERT INTO `admin_login` VALUES (1,'admin1','yes'),(2,'admin2','a4624376c7b1bbd4b9030b284d4de42fe0af5361');
+INSERT INTO `admin_login` VALUES (1,'admin1','yes'),(2,'admin2','a4624376c7b1bbd4b9030b284d4de42fe0af5361'),(3,'admin3','12c922e5325af6d65e74aa30b007c3a40227c3ec');
 /*!40000 ALTER TABLE `admin_login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,7 +117,7 @@ CREATE TABLE `cart` (
   `product_name` varchar(255) DEFAULT NULL,
   `quantity` int(20) DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,7 +126,6 @@ CREATE TABLE `cart` (
 
 LOCK TABLES `cart` WRITE;
 /*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-INSERT INTO `cart` VALUES (6,2000.00,'Screen Cleaner',NULL);
 /*!40000 ALTER TABLE `cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -189,4 +188,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-17 15:21:56
+-- Dump completed on 2024-05-17 23:15:53
