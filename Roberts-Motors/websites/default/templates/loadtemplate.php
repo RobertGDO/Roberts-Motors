@@ -64,4 +64,23 @@ function save($pdo, $table, $record, $primaryKey) {
     }
 }
 
+
+class DatabaseTable {
+    public function find($pdo, $table, $field, $value) {
+    $stmt = $pdo->prepare('SELECT * FROM ' . $table . ' WHERE ' . $field . ' = :value');
+    $criteria = [
+    'value' => $value
+    ];
+    $stmt->execute($criteria);
+    return $stmt->fetchAll();
+    }
+    public function delete($pdo, $table, $field, $value) {
+    $stmt = $pdo->prepare('DELETE FROM ' . $table . ' WHERE ' . $field . ' = :value');
+    $criteria = [
+    'value' => $value
+    ];
+    $stmt->execute($criteria);
+    }
+    }
+
 ?>

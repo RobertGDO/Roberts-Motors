@@ -6,12 +6,11 @@ $pdo = new PDO('mysql:dbname=roberts_motors;host=mysql', 'student', 'student');
 $find = findAll($pdo, 'cars', 'car_id');
 
 if(isset($_POST['add_to_cart'])){
-    $product_id = $_POST['car_id'];
     $price = $_POST['car_price'];
     $product_name = $_POST['car_name'];
 
-    $insert_product = $pdo->prepare('INSERT INTO cart (product_id, price, product_name) VALUES (:product_id, :price, :product_name)');
-    $insert_product->execute(['product_id' => $product_id, 'price' => $price, 'product_name' => $product_name]);
+    $insert_product = $pdo->prepare('INSERT INTO cart (price, product_name) VALUES (:price, :product_name)');
+    $insert_product->execute(['price' => $price, 'product_name' => $product_name]);
 }
 ?>
 

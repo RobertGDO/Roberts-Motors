@@ -24,8 +24,8 @@ if (isset($_POST['login'])) { #If the login button is pressed
     $stmt->execute($values); #Execute the prepared statement
 
     if ($stmt->rowCount() > 0) {
-        echo 'Login successful';
         $_SESSION['loggedin'] = true; #Set the session variable of 'loggedin' as true
+        header('Location: index.php');
         $_SESSION['name'] = $_POST['username'];
     } else {
         echo 'Sorry your username and password could not be found';
