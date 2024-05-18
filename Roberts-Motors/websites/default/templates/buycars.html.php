@@ -28,6 +28,7 @@ foreach($find as $cars){
 <?php       
     echo '<p>' . '£' . $cars['price'].'</p>';
     echo '<p>'. 'Car Make:' . " " . $cars['car_name'].'</p>';
+    echo '<p>'. 'Model: ' . " " . $cars['model'].'</p>';
     echo '<p>'. 'Engine:' . " " . $cars['engine'].'</p>';
     echo '<p>'. 'Details:' . " " . $cars['details'].'</p>';
     echo '<p>'. 'Summary: ' . " " . $cars['summary'].'</p>';
