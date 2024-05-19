@@ -23,12 +23,8 @@ echo '<body class="indexGrid">';
 
 echo '<div class="banner-img">';
 
-if (isset($_GET['model']) && !empty($_GET['model'])) {
-        $selectedModel = $_GET['model'];
-    } else {
-        $selectedModel = '';
-    }
-    
+$selectedModel = isset($_GET['model']) ? $_GET['model'] : ''; 
+
 
 ?>
 
@@ -48,6 +44,10 @@ if (isset($_GET['model']) && !empty($_GET['model'])) {
         <select id="make" name="make" disabled>
                 <option value="" selected disabled hidden>Any</option>
         </select>
+    
+    <label>Max Price:</label>
+    <input type="text" name = "Price" />
+    
     <input type="submit" name="index_search" value="Search!"/>
 
 </form>
@@ -60,6 +60,7 @@ function updateMakes() {
     xhr.open('GET', 'get_makes.php?model=' + model, true);
     xhr.onload = function() {
         if (this.status == 200) {
+            console.log(this.responseText);
             var makes = JSON.parse(this.responseText);
             var makeSelect = document.getElementById('make');
             makeSelect.innerHTML = '<option value="" selected disabled hidden>Any</option>';

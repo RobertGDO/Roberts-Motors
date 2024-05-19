@@ -3,6 +3,26 @@
 session_start();
 
 $pdo = new PDO('mysql:dbname=roberts_motors;host=mysql', 'student', 'student');
+
+$model = '';
+$make = '';
+
+if(isset($_GET['model'])){
+$model = $_GET["model"];
+}
+if(isset($_GET['make'])){
+$make = $_GET["make"];
+}
+if(isset($_GET['Price'])){
+$Price = $_GET["Price"];
+}
+
+if(isset($_GET['make'])){
+$filterFindmake = find($pdo, 'cars', 'model', $make);
+}
+if(isset($_GET['model'])){
+$filterFindmodel = find($pdo, 'cars', 'car_name', $model);
+}
 $find = findAll($pdo, 'cars', 'car_id');
 
 if(isset($_POST['add_to_cart'])){
@@ -19,6 +39,36 @@ if(isset($_POST['add_to_cart'])){
 <h2>Cars For Sale</h2>
 
 <?php
+if(isset($_GET['model'])){
+    echo '<ul class="CarProducts">';
+    foreach($filterFindmodel as $models){
+        echo '<li>';
+    ?>
+        <img src="<?php echo $models['images'];?>" alt="<?php echo $models['summary'];?>" width="200" height="200">
+    
+    <?php       
+        echo '<p>' . '£' . $models['price'].'</p>';
+        echo '<p>'. 'Car Make:' . " " . $models['car_name'].'</p>';
+        echo '<p>'. 'Model: ' . " " . $models['model'].'</p>';
+        echo '<p>'. 'Engine:' . " " . $models['engine'].'</p>';
+        echo '<p>'. 'Details:' . " " . $models['details'].'</p>';
+        echo '<p>'. 'Summary: ' . " " . $models['summary'].'</p>';
+        echo '<form action="" method="POST">';
+        echo '<input type="hidden" name="car_id" value="'.$models['car_id'].'">';
+        echo '<input type="hidden" name="car_price" value="'.$models['price'].'">';
+        echo '<input type="hidden" name="car_name" value="'.$models['car_name'].'">';
+        
+        if (isset($_SESSION['loggedin'])) {
+            echo '<input type="submit" name="add_to_cart" value="Add to cart"/>';
+        }
+        
+        echo '</form>';
+        echo '</li>';
+    }
+    echo '</ul>';
+}
+
+else if(!$model && !$make){
 echo '<ul class="CarProducts">';
 foreach($find as $cars){
     echo '<li>';
@@ -45,4 +95,5 @@ foreach($find as $cars){
     echo '</li>';
 }
 echo '</ul>';
+}
 ?>

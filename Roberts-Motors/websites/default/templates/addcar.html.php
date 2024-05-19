@@ -11,7 +11,8 @@ if(isset($_POST['addcar'])) {
         'engine' => $_POST['engine'],
         'details' => $_POST['details'],
         'summary' => $_POST['summary'],
-        'images' => $_POST['images']
+        'images' => $_POST['images'],
+        
     ];
 
     insert($pdo, 'cars', $addcar);
