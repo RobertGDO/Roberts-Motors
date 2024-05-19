@@ -2,7 +2,7 @@
 --
 -- Host: mysql    Database: roberts_motors
 -- ------------------------------------------------------
--- Server version	11.2.2-MariaDB-1:11.2.2+maria~ubu2204
+-- Server version	11.1.2-MariaDB-1:11.1.2+maria~ubu2204
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -37,7 +37,7 @@ CREATE TABLE `accessories` (
   `image` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`accessories_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `accessories` (
 
 LOCK TABLES `accessories` WRITE;
 /*!40000 ALTER TABLE `accessories` DISABLE KEYS */;
-INSERT INTO `accessories` VALUES (1,4.99,'Air Freshener','https://www.costco.co.uk/medias/sys_master/images/h05/h77/10611315834910.jpg','Make your car smell great with this little tree\'s air freshener!'),(2,2000.00,'Screen Cleaner','https://m.media-amazon.com/images/I/71NVU5tPX0L._AC_UF894,1000_QL80_.jpg','Wash your car with this screen cleaner!');
+INSERT INTO `accessories` VALUES (5,3.99,'Little Trees - New Car Scent','https://www.johncraddockltd.co.uk/_images/_images/xl/59689-mtr0002-little-trees-air-freshener-new-car-scent.jpg','Have your car smelling like new'),(6,3.99,'Little Trees - Black Ice','https://cdn.media.halfords.com/i/washford/902817/Little-Trees-Black-Ice-Air-Freshener?fmt=auto&qlt=default&$sfcc_tile$&w=680','Have your car smelling like black ice'),(7,3.99,'Little Trees - Wild Cherry','https://www.johncraddockltd.co.uk/_images/_images/xl/59687-mtr0035-little-trees-air-freshener-wild-cherry-scent.jpg','Have your car smelling like cherries'),(8,3.99,'Little Trees - Arctic White','https://www.johncraddockltd.co.uk/_images/_images/xl/59699-mtr0061-little-trees-air-freshener-arctic-white-scent.jpg','Have your car smelling like the arctic'),(9,3.99,'Little Trees - Frosted Pine','https://www.therange.co.uk/media/0/9/1646384993_12_2075.jpg','Have your car smelling of pine'),(10,3.99,'Little Trees - Vanillaroma','https://www.caraccessoriesplus.co.uk/cdn/shop/products/MTR0001_VanillaromaProductx900.jpg?v=1681309772','Have your car smelling like vanilla'),(11,3.99,'Little Trees - Forest Fresh','https://www.in2detailing.co.uk/cdn/shop/products/image382195753.jpg?v=1672875888','Have your car smelling like a forest'),(12,3.99,'Little Trees - City Style','https://www.johncraddockltd.co.uk/_images/_images/l/59697-mtr0077-little-trees-air-freshener-city-style-scent.jpg','Have your car smelling of a city'),(13,3.99,'Little Trees - Coconut','https://www.in2detailing.co.uk/cdn/shop/products/image382195761_2048x2048.jpg?v=1672875903','Have your car smelling of coconuts'),(14,3.99,'Little Trees - Cotton Candy','https://m.media-amazon.com/images/I/7104GBRG2RL.jpg','Have your car smelling sweet'),(15,3.99,'Little Trees - Mai Tai','https://m.media-amazon.com/images/I/71y6DLAV97L.jpg','Have your car smelling like Mai Tai'),(16,5.99,'Fresh - Hawaiian Breeze','https://i.ebayimg.com/images/g/dIkAAOSwD-hc6BvM/s-l1200.webp','Have your car smelling like Hawaii'),(17,5.99,'Fresh - Sunshine Vanilla','https://i.ebayimg.com/images/g/36IAAOSwYihc6Bu5/s-l400.jpg','Have your car smelling like vanilla'),(18,9.99,'Luxury Screen Wash ','https://www.costco.co.uk/medias/sys_master/images/hce/h96/82257511907358.jpg','Cleans your screen quicker'),(19,7.99,'Concentrated Screen Wash','https://cdn.aws.toolstation.com/images/141020-UK/800/29003.jpg','Used with water and will last a long time'),(20,8.99,'Scented Screen Wash - Berry','https://cdn.media.halfords.com/i/washford/189107/Halfords--10-Ready-To-Use-Berry-Screenwash-5L?fmt=auto&qlt=default&$sfcc_tile$&w=340','Have your windscreen smelling like berries');
 /*!40000 ALTER TABLE `accessories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +62,7 @@ CREATE TABLE `admin_login` (
   `username` varchar(225) DEFAULT NULL,
   `password` varchar(225) DEFAULT NULL,
   PRIMARY KEY (`idadmin_login`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -92,7 +92,7 @@ CREATE TABLE `cars` (
   `images` varchar(255) DEFAULT NULL,
   `model` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`car_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,4 +189,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-19 19:00:28
+-- Dump completed on 2024-05-19 20:05:09

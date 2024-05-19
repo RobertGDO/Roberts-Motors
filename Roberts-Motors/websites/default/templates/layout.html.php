@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+$pdo = new PDO('mysql:dbname=roberts_motors;host=mysql', 'student', 'student');
 
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,33 +68,31 @@
     </main>
     <aside>
     <h2>Filter search</h2>
-    <form action="/search-cars" method="GET">
+    <form action="buycars.php" method="GET">
         <div class="dropdown-btn">Make<i class="fa fa-caret-down"></i></div>
             <div class="dropdown-container">
-                <select id="make" name="make">
+                <select id="model" name="model" onchange="updateMakes()">
                         <option value="">Any</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="volkswagon">Volkswagon</option>
-                        <option value="ford">Ford</option>
-                        <option value="vauxhall">Vauxhall</option>
+    <?php
+        $model = findAll($pdo, 'cars', 'car_name');
+        foreach ($model as $result) {
+            echo '<option value="' . $result['car_name'] . '">'. $result['car_name'] . '</option>';
+            echo $result['car_name']; 
+        } 
+        ?>
                 </select>
             </div>
         </div>
         <div class="dropdown-btn">Model<i class="fa fa-caret-down"></i></div>
             <div class="dropdown-container">
-                <select id="model" name="model">
-                <option value="">Any</option>
-                <option value="500">500</option>
-                <option value="polo">Polo</option>
-                <option value="golf">Golf</option>
-                <option value="corsa">Corsa</option>
-                <option value="fiesta">Fiesta</option>
-                </select>
+    <select id="make" name="make" disabled>
+        <option value="" selected disabled hidden>Any</option>
+    </select>
             </div>
         </div>    
         <div class="dropdown-btn">Mileage<i class="fa fa-caret-down"></i></div>
             <div class="dropdown-container">
-                <select id="model" name="model">
+                <select id="miles" name="miles" disabled>
                 <option value="">Any</option>
                 <option value="500">0-10,000</option>
                 <option value="polo">10,001-20,000</option>
@@ -117,7 +118,7 @@
         </div>
         <div class="dropdown-btn">Fuel Type<i class="fa fa-caret-down"></i></div>
             <div class="dropdown-container">
-                <select id="fuel-type" name="fuel-type">
+                <select id="fuel-type" name="fuel-type" disabled>
                 <option value="">Any</option>
                 <option value="petrol">Petrol</option>
                 <option value="diesel">Diesel</option>
@@ -128,7 +129,7 @@
         </div>
         <div class="dropdown-btn">Transmission<i class="fa fa-caret-down"></i></div>
             <div class="dropdown-container">
-                <select id="transmission" name="transmission">
+                <select id="transmission" name="transmission" disabled>
                 <option value="">Any</option>
                 <option value="manual">Manual</option>
                 <option value="automatic">Automatic</option>
@@ -154,6 +155,32 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
         </script>
+
+<?php $selectedModel = isset($_GET['model']) ? $_GET['model'] : ''; ?>
+
+<script>
+    function updateMakes() {
+        var model = document.getElementById('model').value;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'get_makes.php?model=' + model, true);
+        xhr.onload = function () {
+            if (this.status == 200) {
+                console.log(this.responseText);
+                var makes = JSON.parse(this.responseText);
+                var makeSelect = document.getElementById('make');
+                makeSelect.innerHTML = '<option value="" selected disabled hidden>Any</option>';
+                makes.forEach(function (make) {
+                    var option = document.createElement('option');
+                    option.value = make.make;
+                    option.textContent = make.make;
+                    makeSelect.appendChild(option);
+                });
+                makeSelect.removeAttribute('disabled');
+            }
+        };
+        xhr.send();
+    }
+</script>
     </aside>
     <footer>
         <div>

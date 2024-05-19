@@ -58,10 +58,10 @@ if(isset($_GET['make'])){
         echo '<input type="hidden" name="car_price" value="'.$makes['price'].'">';
         echo '<input type="hidden" name="car_name" value="'.$makes['car_name'].'">';
         
-        if (isset($_SESSION['loggedin'])) {
+        if (isset($_SESSION['loggedin']) || isset($_SESSION['adminloggedin']))  {
             echo '<input type="submit" name="add_to_cart" value="Add to cart"/>';
         }
-        
+    
         echo '</form>';
         echo '</li>';
     }
@@ -86,7 +86,7 @@ else if(isset($_GET['model'])){
         echo '<input type="hidden" name="car_price" value="'.$models['price'].'">';
         echo '<input type="hidden" name="car_name" value="'.$models['car_name'].'">';
         
-        if (isset($_SESSION['loggedin'])) {
+        if (isset($_SESSION['loggedin']) || isset($_SESSION['adminloggedin']))  {
             echo '<input type="submit" name="add_to_cart" value="Add to cart"/>';
         }
         
@@ -115,7 +115,7 @@ foreach($find as $cars){
     echo '<input type="hidden" name="car_price" value="'.$cars['price'].'">';
     echo '<input type="hidden" name="car_name" value="'.$cars['car_name'].'">';
     
-    if (isset($_SESSION['loggedin'])) {
+    if (isset($_SESSION['loggedin']) || isset($_SESSION['adminloggedin']))  {
         echo '<input type="submit" name="add_to_cart" value="Add to cart"/>';
     }
     
