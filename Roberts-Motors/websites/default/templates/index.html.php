@@ -24,26 +24,18 @@ echo '<body class="indexGrid">';
 echo '<div class="banner-img">
         <div class="banner-text">
         <h1>Driving Happiness</h1>
-        </div>
-        </div>';
-
-$selectedModel = isset($_GET['model']) ? $_GET['model'] : '';
-
-?>
-
-<form action="buycars.php" method="GET">
+        <form action="buycars.php" method="GET">
     <label>Model:</label>
     <label>Make:</label>
     <select id="model" name="model" onchange="updateMakes()">
-        <option value="">Any</option>
-        <?php
-        $model = findAll($pdo, 'cars', 'car_name');
-        foreach ($model as $result) { ?>
+        <option value="">Any</option>';
 
-            <option value="<?= $result['car_name'] ?>"><?= $result['car_name'] ?></option>
-            <?php echo $result['car_name']; ?>
-        <?php } ?>
-    </select>
+        $model = findAll($pdo, 'cars', 'car_name');
+        foreach ($model as $result) {
+            echo '<option value="' . $result['car_name'] . '">'. $result['car_name'] . '</option>';
+            echo $result['car_name']; 
+        }
+   echo '</select>
     <select id="make" name="make" disabled>
         <option value="" selected disabled hidden>Any</option>
     </select>
@@ -55,6 +47,13 @@ $selectedModel = isset($_GET['model']) ? $_GET['model'] : '';
 
 </form>
 
+        </div>
+    </div>
+</div>';
+
+$selectedModel = isset($_GET['model']) ? $_GET['model'] : '';
+
+?>
 
 <script>
     function updateMakes() {
