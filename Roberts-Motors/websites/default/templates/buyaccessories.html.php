@@ -23,7 +23,8 @@ if(isset($_POST['add_to_cart'])){
 
 
 <?php
-echo '<ul class="CarProducts">';
+echo '<ul class="CarProducts">
+    <ul class="buyaccessories img">';
 foreach($findA as $Accessories){
 
 echo '<li>';
