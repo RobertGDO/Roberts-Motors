@@ -12,7 +12,7 @@ if(isset($_POST['addcar'])) {
         'details' => $_POST['details'],
         'summary' => $_POST['summary'],
         'images' => $_POST['images'],
-        
+        'model' => $_POST['model']
     ];
 
     insert($pdo, 'cars', $addcar);
@@ -33,6 +33,8 @@ else{
     <label>Image URL of car:</label>
     <input type="text" name="summary"/>
     <input type="text" name="images"/>
+    <label>Model Of Car:</label>
+    <input type="text" name = "model" />
     <input type="submit" name="addcar" value="Add Car"/>
 
 </form>

@@ -39,7 +39,35 @@ if(isset($_POST['add_to_cart'])){
 <h2>Cars For Sale</h2>
 
 <?php
-if(isset($_GET['model'])){
+if(isset($_GET['make'])){
+    echo '<ul class="CarProducts">';
+    foreach($filterFindmake as $makes){
+        echo '<li>';
+    ?>
+        <img src="<?php echo $makes['images'];?>" alt="<?php echo $makes['summary'];?>" width="200" height="200">
+    
+    <?php       
+        echo '<p>' . '£' . $makes['price'].'</p>';
+        echo '<p>'. 'Car Make:' . " " . $makes['car_name'].'</p>';
+        echo '<p>'. 'Model: ' . " " . $makes['model'].'</p>';
+        echo '<p>'. 'Engine:' . " " . $makes['engine'].'</p>';
+        echo '<p>'. 'Details:' . " " . $makes['details'].'</p>';
+        echo '<p>'. 'Summary: ' . " " . $makes['summary'].'</p>';
+        echo '<form action="" method="POST">';
+        echo '<input type="hidden" name="car_id" value="'.$makes['car_id'].'">';
+        echo '<input type="hidden" name="car_price" value="'.$makes['price'].'">';
+        echo '<input type="hidden" name="car_name" value="'.$makes['car_name'].'">';
+        
+        if (isset($_SESSION['loggedin'])) {
+            echo '<input type="submit" name="add_to_cart" value="Add to cart"/>';
+        }
+        
+        echo '</form>';
+        echo '</li>';
+    }
+    echo '</ul>';
+}
+else if(isset($_GET['model'])){
     echo '<ul class="CarProducts">';
     foreach($filterFindmodel as $models){
         echo '<li>';
