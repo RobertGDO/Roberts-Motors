@@ -21,6 +21,7 @@ main {
     color: #0A0A0B;
     /*padding-left: 5%;*/
     grid-area: main;
+    padding-bottom: 50em;
 }
 
 .banner-img {
