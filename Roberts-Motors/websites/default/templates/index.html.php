@@ -26,8 +26,8 @@ echo '<div class="banner-img">
         <h1>Driving Happiness</h1>
         </div>
         </div>';
-
 $selectedModel = isset($_GET['model']) ? $_GET['model'] : '';
+
 
 ?>
 

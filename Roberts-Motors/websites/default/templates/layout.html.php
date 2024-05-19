@@ -66,7 +66,7 @@
     <aside>
     <h2>Filter search</h2>
     <form action="/search-cars" method="GET">
-            <div class="dropdown-btn">Make<i class="fa fa-caret-down"></i></div>
+        <div class="dropdown-btn">Make<i class="fa fa-caret-down"></i></div>
             <div class="dropdown-container">
                 <select id="make" name="make">
                         <option value="">Any</option>
@@ -76,38 +76,66 @@
                         <option value="vauxhall">Vauxhall</option>
                 </select>
             </div>
-        </div>   
-                
-            
-            
-            <label for="model">Model</label>
-            <select id="model" name="model">
+        </div>
+        <div class="dropdown-btn">Model<i class="fa fa-caret-down"></i></div>
+            <div class="dropdown-container">
+                <select id="model" name="model">
                 <option value="">Any</option>
                 <option value="500">500</option>
                 <option value="polo">Polo</option>
                 <option value="golf">Golf</option>
                 <option value="corsa">Corsa</option>
                 <option value="fiesta">Fiesta</option>
-            </select>
-            <label for="mileage-max">Mileage (Max)</label>
-            <input type="number" id="mileage-max" name="mileage_max" placeholder="Max Mileage">
-            <label for="fuel-type">Fuel Type</label>
-            <select id="fuel-type" name="fuel_type">
+                </select>
+            </div>
+        </div>    
+        <div class="dropdown-btn">Mileage<i class="fa fa-caret-down"></i></div>
+            <div class="dropdown-container">
+                <select id="model" name="model">
+                <option value="">Any</option>
+                <option value="500">0-10,000</option>
+                <option value="polo">10,001-20,000</option>
+                <option value="golf">20,001-30,000</option>
+                <option value="corsa">30,001-40,000</option>
+                <option value="fiesta">40,001-50,000</option>
+                <option value="500">50,001-60,000</option>
+                <option value="polo">60,001-70,000</option>
+                <option value="golf">70,001-80,000</option>
+                <option value="corsa">80,001-90,000</option>
+                <option value="fiesta">90,001-100,000</option>
+                <option value="polo">100,001-110,000</option>
+                <option value="golf">110,001-120,000</option>
+                <option value="corsa">120,001-130,000</option>
+                <option value="fiesta">130,001-140,000</option>
+                <option value="500">140,001-150,000</option>
+                <option value="polo">150,001-160,000</option>
+                <option value="golf">160,001-170,000</option>
+                <option value="corsa">170,001-180,000</option>
+                <option value="fiesta">180,001-190,000</option>
+                </select>
+            </div>
+        </div>
+        <div class="dropdown-btn">Fuel Type<i class="fa fa-caret-down"></i></div>
+            <div class="dropdown-container">
+                <select id="fuel-type" name="fuel-type">
                 <option value="">Any</option>
                 <option value="petrol">Petrol</option>
                 <option value="diesel">Diesel</option>
                 <option value="electric">Electric</option>
                 <option value="hybrid">Hybrid</option>
-            </select>
-         
-            <label for="transmission">Transmission</label>
-            <select id="transmission" name="transmission">
+                </select>
+            </div>
+        </div>
+        <div class="dropdown-btn">Transmission<i class="fa fa-caret-down"></i></div>
+            <div class="dropdown-container">
+                <select id="transmission" name="transmission">
                 <option value="">Any</option>
                 <option value="manual">Manual</option>
                 <option value="automatic">Automatic</option>
-            </select>
-            
-            <button type="submit">Search</button>
+                </select>
+            </div>
+        </div>
+        <button type="submit">Search</button>
         </form>
         <script>
             //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
