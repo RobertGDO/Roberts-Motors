@@ -8,3 +8,7 @@ $clear = DeleteALL($pdo, 'cart');
 header('Location: shoppingcart.php');
 
 ?>
+
+
+Test
+
