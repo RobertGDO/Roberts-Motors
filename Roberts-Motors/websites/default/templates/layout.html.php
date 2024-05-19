@@ -66,14 +66,20 @@
     <aside>
     <h2>Filter search</h2>
     <form action="/search-cars" method="GET">
-            <label for="make">Make</label>
-            <select id="make" name="make">
-                <option value="">Any</option>
-                <option value="fiat">Fiat</option>
-                <option value="volkswagon">Volkswagon</option>
-                <option value="ford">Ford</option>
-                <option value="vauxhall">Vauxhall</option>
-            </select>
+            <div class="dropdown-btn">Make<i class="fa fa-caret-down"></i></div>
+            <div class="dropdown-container">
+                <select id="make" name="make">
+                        <option value="">Any</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="volkswagon">Volkswagon</option>
+                        <option value="ford">Ford</option>
+                        <option value="vauxhall">Vauxhall</option>
+                </select>
+            </div>
+        </div>   
+                
+            
+            
             <label for="model">Model</label>
             <select id="model" name="model">
                 <option value="">Any</option>
@@ -82,7 +88,6 @@
                 <option value="golf">Golf</option>
                 <option value="corsa">Corsa</option>
                 <option value="fiesta">Fiesta</option>
-               
             </select>
             <label for="mileage-max">Mileage (Max)</label>
             <input type="number" id="mileage-max" name="mileage_max" placeholder="Max Mileage">
@@ -104,6 +109,23 @@
             
             <button type="submit">Search</button>
         </form>
+        <script>
+            //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+        </script>
     </aside>
     <footer>
         <div>

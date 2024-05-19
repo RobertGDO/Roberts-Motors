@@ -15,7 +15,7 @@ body {
         "main"
         "aside"
         "footer";
-    background-color:#9E9E94;
+    background-color: #9E9E94;
 }
 
 main {
@@ -53,10 +53,10 @@ main {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
     background-color: #9E9E94;
 }
 
@@ -78,7 +78,7 @@ aside {
 }
 
 .loginAside {
-    display:flex;
+    display: flex;
     padding: 2em;
 }
 
@@ -115,7 +115,8 @@ nav ul li {
     border-bottom: 1px solid #0A0A0B;
 }
 
-nav li, nav a {
+nav li,
+nav a {
     width: 70%;
     display: block;
     transition: 0.7s;
@@ -160,7 +161,7 @@ nav {
 /*makes nav appear when icon clicked*/
 #clicked:target nav {
     display: block;
-    transform: translate(0,0);
+    transform: translate(0, 0);
 }
 
 #clicked .on {
@@ -171,6 +172,7 @@ nav {
 #clicked .off {
     display: none;
 }
+
 /*hides the click off icon*/
 #clicked:target .on {
     display: none;
@@ -181,7 +183,22 @@ nav {
     display: block;
 }
 
-.CarProducts, .reviews {list-style-type: none;}
-.CarProducts li, .reviews li {padding: 2em;}
-.CarProducts li:nth-child(odd), .reviews li:nth-child(odd) {background-color: #fff;}
-.CarProducts li:nth-child(even), .products li:nth-child(even) {background-color: #ddd;}
+.CarProducts,
+.reviews {
+    list-style-type: none;
+}
+
+.CarProducts li,
+.reviews li {
+    padding: 2em;
+}
+
+.CarProducts li:nth-child(odd),
+.reviews li:nth-child(odd) {
+    background-color: #fff;
+}
+
+.CarProducts li:nth-child(even),
+.products li:nth-child(even) {
+    background-color: #ddd;
+}

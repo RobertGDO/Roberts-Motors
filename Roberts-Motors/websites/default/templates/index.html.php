@@ -15,16 +15,19 @@ $pdo = new PDO('mysql:dbname=' . $schema . ';host=' . $server, $username, $passw
 $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username AND password = :password');
 
 if (isset($_SESSION['loggedin'])) {
-        echo "Welcome back " . $_SESSION['name'];
+    echo "Welcome back " . $_SESSION['name'];
 } else {
 }
 
 echo '<body class="indexGrid">';
 
-echo '<div class="banner-img">';
+echo '<div class="banner-img">
+        <div class="banner-text">
+        <h1>Driving Happiness</h1>
+        </div>
+        </div>';
 
-$selectedModel = isset($_GET['model']) ? $_GET['model'] : ''; 
-
+$selectedModel = isset($_GET['model']) ? $_GET['model'] : '';
 
 ?>
 
@@ -32,49 +35,49 @@ $selectedModel = isset($_GET['model']) ? $_GET['model'] : '';
     <label>Model:</label>
     <label>Make:</label>
     <select id="model" name="model" onchange="updateMakes()">
-                <option value="">Any</option>
-                <?php
-                $model = findAll($pdo, 'cars', 'car_name');
-                foreach($model as $result){ ?>
+        <option value="">Any</option>
+        <?php
+        $model = findAll($pdo, 'cars', 'car_name');
+        foreach ($model as $result) { ?>
 
-                <option value="<?=$result['car_name']?>"><?=$result['car_name']?></option>
-                <?php echo $result['car_name'];?>
-                <?php } ?>
-        </select>
-        <select id="make" name="make" disabled>
-                <option value="" selected disabled hidden>Any</option>
-        </select>
-    
+            <option value="<?= $result['car_name'] ?>"><?= $result['car_name'] ?></option>
+            <?php echo $result['car_name']; ?>
+        <?php } ?>
+    </select>
+    <select id="make" name="make" disabled>
+        <option value="" selected disabled hidden>Any</option>
+    </select>
+
     <label>Max Price:</label>
-    <input type="text" name = "Price" />
-    
-    <input type="submit" name="index_search" value="Search!"/>
+    <input type="text" name="Price" />
+
+    <input type="submit" name="index_search" value="Search!" />
 
 </form>
 
 
 <script>
-function updateMakes() {
-    var model = document.getElementById('model').value;
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'get_makes.php?model=' + model, true);
-    xhr.onload = function() {
-        if (this.status == 200) {
-            console.log(this.responseText);
-            var makes = JSON.parse(this.responseText);
-            var makeSelect = document.getElementById('make');
-            makeSelect.innerHTML = '<option value="" selected disabled hidden>Any</option>';
-            makes.forEach(function(make) {
-                var option = document.createElement('option');
-                option.value = make.make;
-                option.textContent = make.make;
-                makeSelect.appendChild(option);
-            });
-            makeSelect.removeAttribute('disabled');
-        }
-    };
-    xhr.send();
-}
+    function updateMakes() {
+        var model = document.getElementById('model').value;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'get_makes.php?model=' + model, true);
+        xhr.onload = function () {
+            if (this.status == 200) {
+                console.log(this.responseText);
+                var makes = JSON.parse(this.responseText);
+                var makeSelect = document.getElementById('make');
+                makeSelect.innerHTML = '<option value="" selected disabled hidden>Any</option>';
+                makes.forEach(function (make) {
+                    var option = document.createElement('option');
+                    option.value = make.make;
+                    option.textContent = make.make;
+                    makeSelect.appendChild(option);
+                });
+                makeSelect.removeAttribute('disabled');
+            }
+        };
+        xhr.send();
+    }
 </script>
 
 <?php
@@ -90,22 +93,22 @@ $LatestCars->execute();
 echo '<ul class="CarProducts">';
 foreach ($LatestCars as $cars) {
 
-        echo '<li>';
-        ?>
-        <img src=<?php echo $cars['images']; ?> alt=<?php echo $cars['summary']; ?> width="200" height="200">
+    echo '<li>';
+    ?>
+    <img src=<?php echo $cars['images']; ?> alt=<?php echo $cars['summary']; ?> width="200" height="200">
 
-        <?php
-        echo '<p>' . '£' . $cars['price'] . '</p>';
+    <?php
+    echo '<p>' . '£' . $cars['price'] . '</p>';
 
-        echo '<p>' . 'Car Make:' . " " . $cars['car_name'] . '</p>';
+    echo '<p>' . 'Car Make:' . " " . $cars['car_name'] . '</p>';
 
-        echo '<p>' . 'Engine:' . " " . $cars['engine'] . '</p>';
+    echo '<p>' . 'Engine:' . " " . $cars['engine'] . '</p>';
 
-        echo '<p>' . 'Details:' . " " . $cars['details'] . '</p>';
+    echo '<p>' . 'Details:' . " " . $cars['details'] . '</p>';
 
-        echo '<p>' . 'Summary: ' . " " . $cars['summary'] . '</p>';
+    echo '<p>' . 'Summary: ' . " " . $cars['summary'] . '</p>';
 
-        echo '</li>';
+    echo '</li>';
 }
 echo '</ul>';
 ?>
