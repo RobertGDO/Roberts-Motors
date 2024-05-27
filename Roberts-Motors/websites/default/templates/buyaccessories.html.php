@@ -35,7 +35,7 @@ echo '<li>';
 <?php       
         echo '<p>' . '£' . $Accessories['price'].'</div>';
 
-        echo '<p>'. 'Car Make:' . " " . $Accessories['accessory_name'].'</p>';
+        echo '<p>'. 'Accessory:' . " " . $Accessories['accessory_name'].'</p>';
         
         echo '<p>'. 'Details:' . " " . $Accessories['description'].'</h3>';
         echo '<form action="" method="POST">';
